@@ -1,0 +1,29 @@
+/* Card Individual */
+.container-card { /* Mude o nome da classe no seu CityCard.js para não confundir */
+    width: 300px; 
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* Centraliza todo o texto */
+    font-family: sans-serif;
+}
+
+/* Imagem ajustada */
+.url-imagem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Faz a foto preencher sem esticar */
+}
+
+/* Espaçamento dos textos */
+.nome-da-cidade h2 {
+    margin: 15px 0 5px 0;
+    color: #333;
+}
+
+.votos-da-cidade h3 {
+    margin-bottom: 20px;
+    color: #666;
+    font-weight: normal;
+}
