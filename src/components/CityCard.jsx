@@ -1,29 +1,25 @@
-import { useState } from 'react'
-import './CityCard.css'
+import './CityCard.css';
 
-const CityCard = ({nome_cidade, url_imagem, quantidade_votos}) => {
- // const [count, setCount] = useState(0)
- //nome da cidade 
- // url da imagem 
-// quantidade de votos
-
-
+const CityCard = ({ nome_cidade, url_imagem, quantidade_votos, onVote }) => {
   return (
-  <div className='container-card'> {/* Mudei aqui */}
-    <div className='url-imagem'>
+    <div className='container-card'>
+      <div className='url-imagem'>
         <img src={url_imagem} alt={nome_cidade} />
-    </div>
-    <div className='nome-da-cidade'>
+      </div>
+      <div className='nome-da-cidade'>
         <h2>{nome_cidade}</h2>
-    </div>
-    <div className='votos-da-cidade'>
+      </div>
+      <div className='votos-da-cidade'>
         <h3>Votos: {quantidade_votos}</h3>
+      </div>
+      <div className='button-vote'>
+       
+        <button onClick={onVote}> 
+            Votar em {nome_cidade}
+        </button>
+      </div>
     </div>
-    <div className='button-vote'>
-        <input type="button" value="Votar" />
-    </div>
-  </div>
-)
-}
+  );
+};
 
-export default CityCard
+export default CityCard;

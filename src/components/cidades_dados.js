@@ -1,8 +1,4 @@
-import CityCard from "./CityCard";
-import './CityCardList.css'
-
-const CityCardList = () => {
-  const CityCardDatabase = [
+const CityCardDatabase = [
     {
       nome_cidade: "Quixadá",
       url_imagem:
@@ -30,22 +26,4 @@ const CityCardList = () => {
     
   ];
 
-  return (
-    <>
-    <div className="container">
-    {CityCardDatabase.map((city) => (
-        <CityCard
-          nome_cidade={city.nome_cidade}
-          url_imagem={city.url_imagem}
-          quantidade_votos={city.quantidade_votos}
-          
-        />
-      ))}
-      
-    </div>
-      
-    </>
-  );
-};
-
-export default CityCardList;
+  export default CityCardDatabase
